@@ -7,7 +7,7 @@
     <div class="fl w-75 ph4 bl h-100">
 
         {{ partial "nav.html" . }}
-        
+
         <div>
         {{- $paginator := .Paginator -}}
         {{- range $paginator.Pages.ByPublishDate.Reverse }}
