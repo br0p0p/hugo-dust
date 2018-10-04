@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+    <div class="main">
+
+        {{- $paginator := .Paginator -}}
+        {{- range $paginator.Pages }}
+            <article class="article">{{ .Title }}</article>
+        {{- end }}
+    </div>
+
+{{ end }}
