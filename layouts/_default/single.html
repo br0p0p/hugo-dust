@@ -6,13 +6,15 @@
 
 <div class="fl w-75 ph4 bl h-100">
 
+    {{ partial "nav.html" . }}
+
 	  <article class="article">
 	      {{ with .Params.image }}<img src="{{ . }}" class="article-image" />{{ end }}
 	      {{ with .Params.series }}<p class="article-title-series"><a href="{{ "/" | relURL }}series/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>&nbsp;/</p>{{ end }}
-	      <h1 class="bb pb3">{{ .Title }}</h1>
+	      <h1 class="f2 lh-title mb3">{{ .Title }}</h1>
 	      {{ with .Params.subtitle }}<h2 class="article-subtitle">{{ . }}</h2>{{ end }}
-	      <ul class="article-meta">
-	          <li class="article-meta-date"><time>{{ .Date.Format (default "January 2, 2006" $.Site.Params.dateFormat) }}</time></li>
+	      <ul class="list pl0">
+	          <li class="gray"><time>{{ .Date.Format (default "January 2, 2006" $.Site.Params.dateFormat) }}</time></li>
 	          {{- if .Params.categories }}
 	          {{- range .Params.categories }}
 	          <li class="article-meta-categories">
