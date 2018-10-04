@@ -1,0 +1,5 @@
+
+pygmentsCodeFences = true
+pygmentsStyle = "rainbow_dash"
+pygmentsCodeFencesGuessSyntax = true
+# pygmentsUseClasses = true
